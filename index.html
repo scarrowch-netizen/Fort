@@ -827,8 +827,9 @@
 
   // Start with intro screen visible
   ui.status.textContent = "bereit";
-  updateHUD();
-  requestAnimationFrame(tick);
+reset(); // erstellt player sofort
+world.running = false; // Spiel bleibt trotzdem bis Start pausiert
+requestAnimationFrame(tick);
 
 })();
 </script>
